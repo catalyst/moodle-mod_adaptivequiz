@@ -432,8 +432,8 @@ class fetchquestion {
                      WHERE ti.itemtype = :itemtype
                            AND ti.tagid $includetags
                            AND q.category $includeqcats
-                  GROUP BY t.name
-                  ORDER BY t.id ASC";
+                  GROUP BY t.name";
+                  //ORDER BY t.id ASC";
             $records = $DB->get_records_sql_menu($sql, $params);
             return $records;
         } catch (coding_exception $e) {
